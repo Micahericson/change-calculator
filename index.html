@@ -10,65 +10,72 @@
     />
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body class="bg-light text-dark">
+  <body>
     <div class="container py-5">
       <div class="text-center mb-4">
-        <img src="images/money.png" alt="Money" class="banner-img" />
+        <!--<img src="images/money.png" alt="Money" class="banner-img" />-->
         <h1 class="mt-3 text-primary">Change Calculator</h1>
       </div>
 
       <div class="card shadow-sm p-4">
         <form id="change-form">
-          <div class="mb-3">
-            <label for="amount-due" class="form-label">Amount Due</label>
-            <input
-              type="number"
-              class="form-control"
-              id="amount-due"
-              placeholder="Enter amount due"
-              required
-            />
+          <div class="row">
+            <div class="col-md-6 mb-4">
+              <div class="card shadow-sm p-4 h-100">
+                <form id="change-form">
+                  <!-- your form inputs go here -->
+                  <div class="mb-3">
+                    <label for="amount-due" class="form-label">Amount Due</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="amount-due"
+                      placeholder="Enter amount due"
+                      required
+                    />
+                  </div>
+          
+                  <div class="mb-3">
+                    <label for="amount-received" class="form-label">Amount Received</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="amount-received"
+                      placeholder="Enter amount received"
+                      required
+                    />
+                  </div>
+          
+                  <button type="button" id="calculate-change" class="btn btn-primary w-100">
+                    Calculate Change
+                  </button>
+                </form>
+              </div>
+            </div>
+          
+            <div class="col-md-6 mb-4">
+              <div id="change-output" class="card p-4 shadow d-none h-100">
+                <h4 class="text-success">Change Breakdown</h4>
+                <p class="fs-4 fw-semibold text-dark">
+                  Total Change Due: $<span id="total-change">0.00</span>
+                </p>
+                <p id="dollars-output" class="d-none">0.00</p>
+          
+                <ul class="list-group list-group-flush mt-3">
+                  <li class="list-group-item">$20 Bills: <span id="twenties-output">0</span></li>
+                  <li class="list-group-item">$10 Bills: <span id="tens-output">0</span></li>
+                  <li class="list-group-item">$5 Bills: <span id="fives-output">0</span></li>
+                  <li class="list-group-item">$2 Bills: <span id="twos-output">0</span></li>
+                  <li class="list-group-item">$1 Bills: <span id="ones-output">0</span></li>
+                  <li class="list-group-item">Quarters: <span id="quarters-output">0</span></li>
+                  <li class="list-group-item">Dimes: <span id="dimes-output">0</span></li>
+                  <li class="list-group-item">Nickels: <span id="nickels-output">0</span></li>
+                  <li class="list-group-item">Pennies: <span id="pennies-output">0</span></li>
+                </ul>
+              </div>
+            </div>
           </div>
-
-          <div class="mb-3">
-            <label for="amount-received" class="form-label">Amount Received</label>
-            <input
-              type="number"
-              class="form-control"
-              id="amount-received"
-              placeholder="Enter amount received"
-              required
-            />
-          </div>
-
-          <button type="button" id="calculate-change" class="btn btn-primary w-100">
-            Calculate Change
-          </button>
-        </form>
-      </div>
-
-      <div id="change-output" class="mt-5 card p-4 shadow d-none">
-        <h4 class="text-success">Change Breakdown</h4>
-
-        <p class="fs-4 fw-semibold text-dark">
-          Total Change Due: $<span id="total-change">0.00</span>
-        </p>
-        <p id="dollars-output" class="d-none">0.00</p>
-        
-        <ul class="list-group list-group-flush mt-3">
-          <li class="list-group-item">$20 Bills: <span id="twenties-output">0</span></li>
-          <li class="list-group-item">$10 Bills: <span id="tens-output">0</span></li>
-          <li class="list-group-item">$5 Bills: <span id="fives-output">0</span></li>
-          <li class="list-group-item">$2 Bills: <span id="twos-output">0</span></li>
-          <li class="list-group-item">$1 Bills: <span id="ones-output">0</span></li>
-          <li class="list-group-item">Quarters: <span id="quarters-output">0</span></li>
-          <li class="list-group-item">Dimes: <span id="dimes-output">0</span></li>
-          <li class="list-group-item">Nickels: <span id="nickels-output">0</span></li>
-          <li class="list-group-item">Pennies: <span id="pennies-output">0</span></li>
-        </ul>
-      </div>
-    </div>
-
+          
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="main.js"></script>
   </body>

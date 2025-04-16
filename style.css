@@ -1,8 +1,25 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(to right, #e3f2fd, #fff);
-    color: #333;
-  }
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: url('images/money.png') no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.9); /* semi-transparent white */
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  max-width: 1000px;
+  width: 95%;
+  overflow: auto;
+  max-height: 90vh;
+}
   
   .banner-img {
     display: block;
